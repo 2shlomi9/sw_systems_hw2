@@ -1,6 +1,6 @@
 CC = gcc
 FLAGS= -g -Wall
-all: connections my_graph my_Knapsack
+all: connections 
 connections: my_graph.o my_mat.o
 	$(CC) $(FLAGS)  my_graph.o my_mat.o -o connections
 my_graph: my_graph.o my_mat.o
