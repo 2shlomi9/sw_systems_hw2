@@ -1,6 +1,5 @@
 #include<stdio.h>
 #include<math.h>
-#include "my_mat.h"
 #define MIN(a,b) (((a)<(b))?(a):(b))
 int matrix[sizeMat][sizeMat];
 
