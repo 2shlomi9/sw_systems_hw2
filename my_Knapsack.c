@@ -13,12 +13,8 @@ int knapSack(int weights[],int values[],int selected_bool[]){
           if(i == 0 || j == 0) {
                 values_matrix[i][j] = 0;
           } else if(weights[i-1] <= j) {
-                if(values[i-1] + values_matrix[i-1][j-weights[i-1]] > values_matrix[i-1][j]){
-                    values_matrix[i][j] = values[i-1] + values_matrix[i-1][j-weights[i-1]];
-                }
-                else{
-                    values_matrix[i][j] =  values_matrix[i-1][j];
-                }
+                values_matrix[i][j] = MAX(values[i-1] + values_matrix[i-1][j-weights[i-1]], values_matrix[i-1][j]);
+
                 
           } else {
                 values_matrix[i][j] = values_matrix[i-1][j];
